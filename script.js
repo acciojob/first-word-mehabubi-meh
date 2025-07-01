@@ -1,12 +1,9 @@
 function firstWord(s) {
-  // Trim leading/trailing spaces and split the string by space
-  const trimmed = s.trim();
+  // Remove leading/trailing spaces, then split on one or more spaces
+  const words = s.trim().split(/\s+/);
 
-  // If empty string after trim, return empty string
-  if (trimmed === '') return '';
-
-  // Split by space and return the first word
-  return trimmed.split(' ')[0];
+  // Return the first word if it exists, otherwise return empty string
+  return words[0] || '';
 }
 
 // Do not change the code below
